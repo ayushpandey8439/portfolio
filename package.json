@@ -1,4 +1,5 @@
 {
+  "homepage": "https://ayushpandey8439@github.io/portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,5 +39,8 @@
   "engines": {
     "node": "14.10.1",
     "npm": " 6.14.8"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
