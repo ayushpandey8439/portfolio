@@ -3,15 +3,16 @@ import "./Header.scss";
 
 function Header(props) {
   return (
-    <div className="header">
-      <img className="header_image" src={props.data.avatar} alt="avatar"></img>
-      <div className="header_text">
-        <p className="header_greeting">
-          Hey, I'm <br />
-          {props.data.name}
-        </p>
+    <div>
+      <div className="header">
+        <div className="header_brand">AYUSH PANDEY</div>
+        <div className="header_nav_container">
+          <div className="header_nav">Home</div>
+          <div className="header_nav">Projects</div>
+          <div className="header_nav">Schedule</div>
+          <div className="header_nav">Socials</div>
+        </div>
       </div>
-      <div className="header_bio">{props.data.bio}</div>
     </div>
   );
 }

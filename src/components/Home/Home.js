@@ -14,7 +14,7 @@ function Home(props) {
         <div className="video_overlay"></div>
       </div>
       <Header data={props.data}></Header>
-      <Body></Body>
+      <Body data={props.data}></Body>
     </div>
   );
 }

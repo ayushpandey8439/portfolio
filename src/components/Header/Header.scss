@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mansalva&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
 
 .header_text {
   font-family: "Mansalva", cursive;
@@ -11,21 +9,32 @@
   font-size: 80px;
 }
 .header {
-  z-index: 2;
-  width: 100vw;
+  width: calc(100vw - 40px);
+  padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: stretch;
   color: white;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  font-family: "Playfair Display", serif;
   top: 0;
+  background-color: rgba(26, 18, 78, 0.8);
 }
-.header_image {
-  border-radius: 50%;
-  width: 150px;
+.header_brand {
+  font-size: x-large;
+  align-items: baseline;
 }
 .header_bio {
   padding: 10px;
   font-size: 20px;
   font-family: "Proza Libre", sans-serif;
+}
+
+.header_nav_container {
+  display: flex;
+  flex-direction: row;
+}
+.header_nav {
+  margin-left: 5px;
+  margin-right: 5px;
 }
