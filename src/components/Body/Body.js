@@ -12,6 +12,7 @@ function Body() {
     name: "",
     location: "",
   });
+
   useEffect(() => {
     axios.get("https://api.github.com/users/ayushpandey8439").then((res) => {
       setState({
@@ -31,7 +32,7 @@ function Body() {
           <br />
           I'm a Full Stack Developer
           <br />
-          born in India and currently in Germany
+          born in India and I am in Germany at the moment
         </div>
         <div>
           <Button
@@ -50,6 +51,7 @@ function Body() {
           className="developer_image"
         ></img>
       </div>
+      
     </div>
   );
 }

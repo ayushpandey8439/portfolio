@@ -1,22 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header.scss";
 import MenuIcon from "@material-ui/icons/Menu";
-import CloseIcon from "@material-ui/icons/Close";
+
+import MenuPage from "../Menu/MenuPage";
+
 function Header(props) {
-  const [state, setState] = useState({ displayMenu: false });
-  function showMenu() {
-    setState({ displayMenu: !state.displayMenu });
-  }
+  const displayMenu = props.displayMenu;
+  const [anchorEl, setAnchorEl] = React.useState("");
+  const handleClick = (event) => {
+    props.toggleMenu(!displayMenu);
+  };
+  const handleClose = () => {
+    props.toggleMenu(!displayMenu);
+  };
   return (
     <div>
       <div className="header">
-        {!state.displayMenu && (
-          <MenuIcon onClick={showMenu} className="hamburger__menu"></MenuIcon>
-        )}
-        {state.displayMenu && (
-          <CloseIcon onClick={showMenu} className="hamburger__menu"></CloseIcon>
-        )}
+        <MenuIcon onClick={handleClick} className="hamburger__menu"></MenuIcon>
       </div>
+      <MenuPage displayMenu={props.displayMenu} toggleMenu={props.toggleMenu} />
     </div>
   );
 }
