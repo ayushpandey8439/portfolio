@@ -1,15 +1,39 @@
-@import url("https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;600;700&display=swap");
-
-.body_container {
-  color: white;
+@import "./../../style/theme.scss";
+.body__container {
   display: flex;
-  justify-content: center;
-  font-family: "Proza Libre", sans-serif;
-}
-
-
-
-.avatar_image {
-  border-radius: 50%;
-  width: 100px;
+  flex-direction: row;
+  justify-content: space-between;
+  .text {
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    font-family: $font;
+    flex-direction: column;
+    align-content: center;
+    .hello__world {
+      color: $dark_gray;
+      font-size: large;
+    }
+    .pitch {
+      font-size: xx-large;
+    }
+    .contact__button {
+      color: $light_gray;
+      justify-content: flex-start;
+      font-family: $font;
+      white-space: normal;
+      border: solid 1px white;
+      margin-top: 10px;
+    }
+  }
+  .image {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    .developer_image {
+      width: 100%;
+      filter: invert(96.6%);
+    }
+  }
 }
